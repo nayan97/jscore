@@ -37,26 +37,26 @@
  * 
  * */
 
-// function bmiCal(name, weight, height) {
-//     let bmi= weight / (height * height);
+function bmiCal(name, weight, height) {
+    let bmi= weight / (height * height);
 
-//     if (bmi <18.5) {
-//         console.log(`
-//         Hi ${name}, Your BMI is ${bmi}. so you should eat too many.
-//         `);
-//     }else if(bmi >=18.5 && bmi <25) {
-//         console.log(`
-//         Hi ${name}, Your BMI is ${bmi}. so you should Reliuxs.
-//         `);
-//     }
-//     else if(bmi >=25 && bmi <30) {
-//         console.log(`
-//         Hi ${name}, Your BMI is ${bmi}. so you should eat less before.
-//         `);
-//     }
-//     else if(bmi >=30 && bmi <35) {
-//         console.log(`
-//         Hi ${name}, Your BMI is ${bmi}. so you should eat too less.
-//         `);
-//     }
-// }
+    if (bmi <18.5) {
+        console.log(`
+        Hi ${name}, Your BMI is ${bmi}. so you should eat too many.
+        `);
+    }else if(bmi >=18.5 && bmi <25) {
+        console.log(`
+        Hi ${name}, Your BMI is ${bmi}. so you should Reliuxs.
+        `);
+    }
+    else if(bmi >=25 && bmi <30) {
+        console.log(`
+        Hi ${name}, Your BMI is ${bmi}. so you should eat less before.
+        `);
+    }
+    else if(bmi >=30 && bmi <35) {
+        console.log(`
+        Hi ${name}, Your BMI is ${bmi}. so you should eat too less.
+        `);
+    }
+}

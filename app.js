@@ -7,11 +7,11 @@
  * bmi cal
  */
 
-// let name     =prompt('Name');
-// let weight   =prompt('weight')
-// let height   =prompt('Height')
+let name     =prompt('Name');
+let weight   =prompt('weight')
+let height   =prompt('Height')
 
-// bmiCal(name, weight, height);
+bmiCal(name, weight, height);
 
 
 
