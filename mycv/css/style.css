@@ -76,6 +76,10 @@ section{
     display:flex;
     align-items: center;
     padding: 0  9%;
+    background-image: url(../img/two.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .home-content{
@@ -191,14 +195,39 @@ section{
     overflow: hidden;
 
 }
+.home-sci a:hover{
+    color: var(--bg-color)
+}
 
-.home-sci a ::before{
+.home-sci a::before{
     content: '';
     position: absolute;
     top: 0;
     left:0;
-    width: 100%;
+    width:0;
     height: 100%;
-    background: red;
+    background:var(--maincolor);
     z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+
+/* home-imgHover */
+
+.home-imgHover{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.home-imgHover:hover{
+    background: var(--bg-color);
+    opacity: .6;
 }
