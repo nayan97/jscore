@@ -1,4 +1,4 @@
-// toggle icon navbar
+// -------toggle icon navbar-------
 
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -8,7 +8,7 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
-// scroll Sections 
+// ---------scroll Sections --------
 
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -22,19 +22,27 @@ window.onscroll = () => {
 
         if (top >= offset && top < offset + height) {
 
-            // active navber linkes
+            // ---active navber linkes----
 
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
-
+            
+            // ----active sections for animation on scroll----
+             sec.classList.add('show-animate');
+        }else {
+            //---if want to use animation that reapets on scroll use this----
+            sec.classList.remove('show-animate');
         }
     });
+
+        //------ sticky header--------
+
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
 
-    // remove toggle button and navbar when click navbar links
+    // -----remove toggle button and navbar when click navbar links----
 
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active')
