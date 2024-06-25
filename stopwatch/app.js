@@ -1,16 +1,17 @@
+
 const display = document.getElementById('display');
 
 let timer = null;
 let startTime = 0;
-let esapsedTime = 0;
+let elapsedTime = 0;
 let isRunning = false;
 
 
 function start() {
+
     if (!isRunning){
-        startTime = Date.now() - esapsedTime;
-        timer =setInterval(update,10);
-     
+        startTime = Date.now() - elapsedTime;
+        timer =setInterval(update, 10);
         isRunning = true; 
     }
 }
@@ -27,7 +28,7 @@ function pause() {
 function reset() {
     clearInterval(timer);
     startTime = 0;
-    esapsedTime = 0;
+    elapsedTime = 0;
     isRunning = false;
     display.textContent = '00:00:00:00';
 }
@@ -37,9 +38,9 @@ function update() {
     const curentTime = Date.now();
     elapsedTime = curentTime - startTime;
 
-    let hours = Math.floor(elapsedTime/(1000 * 60 * 60));
-    let minutes = Math.floor(elapsedTime/(1000 * 60) % 60);
-    let seconds = Math.floor(elapsedTime/1000 % 60);
+    let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+    let minutes = Math.floor(elapsedTime / (1000 * 60) % 60);
+    let seconds = Math.floor(elapsedTime /1000 % 60);
     let milliseconds = Math.floor(elapsedTime % 1000 / 10);
 
     hours = String(hours).padStart(2, '0');
