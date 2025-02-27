@@ -9,7 +9,7 @@ document.getElementById("login-btn")
     if (accountNumber.length === 11) {
         if ( pin === 1234){
 
-            
+            window.location.href = "./main.html"
         }else {
             console.log("Please enter a valid pin number");
             
